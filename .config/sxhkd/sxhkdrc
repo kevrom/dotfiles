@@ -84,7 +84,7 @@ super + Return
 	urxvt
 
 super + space
-	dmenu_run
+	j4-dmenu-desktop
 
 # make sxhkd reload its config
 super + Escape
