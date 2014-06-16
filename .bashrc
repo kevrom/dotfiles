@@ -9,6 +9,7 @@ export EDITOR='/usr/bin/vim'
 
 alias ls='ls --color=auto'
 alias lsa='ls -a --color=auto'
+alias svim='sudo vim'
 
 
 function shortwd() {
