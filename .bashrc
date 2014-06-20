@@ -7,9 +7,11 @@
 
 export EDITOR='/usr/bin/vim'
 
+# Aliases
 alias ls='ls --color=auto'
 alias lsa='ls -a --color=auto'
 alias svim='sudo vim'
+alias sk='ssh kevrom@sticky-keys.com'
 
 
 function shortwd() {
