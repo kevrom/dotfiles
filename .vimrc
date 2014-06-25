@@ -6,7 +6,12 @@ call vundle#begin()
 
 " Manage vundle plugins
 Plugin 'gmarik/Vundle.vim'
-
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-obsession'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-surround'
+Plugin 'athanaelkane/vim-indent-guides'
 
 " End plugin list
 call vundle#end()
@@ -56,3 +61,11 @@ set cursorline
 set nohlsearch
 set incsearch
 
+" Close NERDTree if no other buffers present
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Open NERDTree if no files specified on startup
+autocmd vimenter * if !argc() | NERDTree | endif
+
+" Remaps
+map <C-n> :NERDTreeToggle<CR>
