@@ -11,7 +11,12 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-obsession'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-surround'
-Plugin 'athanaelkane/vim-indent-guides'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'goatslacker/mango'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'walm/jshint'
+Plugin 'moll/vim-node'
+Plugin 'jelera/vim-javascript-syntax'
 
 " End plugin list
 call vundle#end()
