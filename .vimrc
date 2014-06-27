@@ -12,11 +12,12 @@ Plugin 'tpope/vim-obsession'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-surround'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'goatslacker/mango'
+Plugin 'goatslacker/mango.vim'
 Plugin 'digitaltoad/vim-jade'
-Plugin 'walm/jshint'
+Plugin 'walm/jshint.vim'
 Plugin 'moll/vim-node'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'vim-scripts/CSApprox'
 
 " End plugin list
 call vundle#end()
@@ -24,7 +25,7 @@ filetype plugin indent on
 
 set t_Co=256
 set background=dark
-colorscheme phd
+colorscheme mango
 
 syntax on	" turn on syntax
 
