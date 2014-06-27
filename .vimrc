@@ -18,6 +18,7 @@ Plugin 'walm/jshint.vim'
 Plugin 'moll/vim-node'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'vim-scripts/CSApprox'
+Plugin 'altercation/vim-colors-solarized'
 
 " End plugin list
 call vundle#end()
