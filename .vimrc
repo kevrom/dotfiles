@@ -81,4 +81,11 @@ map <C-n> :NERDTreeToggle<CR>
 " Enable airline tabs
 let g:airline#extensions#tabline#enabled = 1
 
+" Enable glyphs for powerline
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+	  let g:airline_symbols = {}
+  endif
+let g:airline_symbols.space = "\ua0"
+
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
