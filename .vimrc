@@ -16,10 +16,12 @@ Plugin 'goatslacker/mango.vim'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'walm/jshint.vim'
 Plugin 'moll/vim-node'
+Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'vim-scripts/CSApprox'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
+Plugin 'ervandew/supertab'
 
 " End plugin list
 call vundle#end()
