@@ -19,6 +19,7 @@ Plugin 'moll/vim-node'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'vim-scripts/CSApprox'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'
 
 " End plugin list
 call vundle#end()
@@ -76,3 +77,8 @@ autocmd vimenter * if !argc() | NERDTree | endif
 
 " Remaps
 map <C-n> :NERDTreeToggle<CR>
+
+" Enable airline tabs
+let g:airline#extensions#tabline#enabled = 1
+
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
