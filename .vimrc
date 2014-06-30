@@ -22,18 +22,29 @@ Plugin 'vim-scripts/CSApprox'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
+Plugin '1995eaton/vim-better-javascript-completion'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'elzr/vim-json'
+Plugin 'desert256.vim'
 
 " End plugin list
 call vundle#end()
 filetype plugin indent on
 
 set t_Co=256
+
+" Set color scheme
+" Available schemes: mango, desert256, solarized
 set background=dark
-colorscheme mango
+colorscheme solarized
+
+let g:solarized_termcolors=256
 
 syntax on	" turn on syntax
 
-au BufRead,BufNewFile *.scss set filetype=css
+" au BufRead,BufNewFile *.scss set filetype=css
 au BufRead,BufNewFile *.md set filetype=markdown
 
 set mouse=a	" enable mouse support if available
@@ -86,8 +97,8 @@ let g:airline#extensions#tabline#enabled = 1
 " Enable glyphs for powerline
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
-	  let g:airline_symbols = {}
-  endif
+	let g:airline_symbols = {}
+endif
 let g:airline_symbols.space = "\ua0"
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
