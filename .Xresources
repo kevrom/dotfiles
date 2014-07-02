@@ -1,4 +1,18 @@
-xvt*scrollColor:                      #777777
+! urxvt --help 2>&1| sed -n '/:  /s/^ */! URxvt*/gp' >> ~/.Xresources
+! TERM=dump command man -Pcat urxvt | sed -n '/depth: b/,/^BACKGROUND/p'|sed '$d'| sed 's/@/%-.-%/g; s/\^/%-+-%/g' | sed '/^       [a-z]/s/^ */^/g' | tr -s "\n" \|
+! sed -e :a -e 'N;s/\n/@@/g;ta;P;D' | sed 's,\^\([^@]\+\)@*[\t ]*\([^\^]\+\),! \2\n! URxvt*\1\n\n,g' | sed 's,@@           ,\n           ,g' | sed 's,@*$,,g' |sed '/^[^!]/d'
+
+! Specifies the terminal type name to be set in the TERM environment variable
+URxvt*termName:                         screen-256color
+
+! Create the window with the specified X window geometry [default 80x24]
+URxvt*geometry:                         240x84
+
+! True: start as a login shell by prepending a - to argv[0] of the shell; option -ls.  False: start as a normal sub-shell [default]; 
+URxvt*loginShell:                       true
+
+! Use the specified colour for the scrollbar [default #B2B2B2]
+URxvt*scrollColor:                      #777777
 
 ! Set scrollbar style to rxvt, plain, next or xterm. plain is the authors favourite.
 URxvt*scrollstyle:                      plain
@@ -54,7 +68,7 @@ URxvt*thickness:                      5
 ! URxvt*blurRadius:                     HxV
 
 ! Fade the text by the given percentage when focus is lost
-URxvt*fading:                           30
+! URxvt*fading:                           30
 
 ! Fade to this colour, when fading is used (see fading:). The default colour is black
 ! URxvt*fadeColor:                        Green
@@ -81,10 +95,10 @@ URxvt*mouseWheelScrollPage:             true
 ! URxvt*insecure:                       boolean
 
 ! Use the specified colour as the windows background colour [default White]
-URxvt*background:                       Black
+! URxvt*background:                       Black
 
 !  Use the specified colour as the windows foreground colour [default Black]
-URxvt*foreground:                       White
+! URxvt*foreground:                       White
 
 ! Use the specified colour to disp1ay bold characters when the foreground colour is the default.
 ! URxvt*colorBD:                        color
@@ -152,7 +166,7 @@ URxvt*iconFile:                       /usr/share/icons/gnome/48x48/apps/ksysguar
 
 ! Select the fonts to be used. This is a comma separated list of font names that are checked in order when trying to find glyphs for characters
 
-URxvt*font:                            xft:terminus:size=11,xft:Droid Sans Mono for Powerline:size=11
+URxvt*font:                           xft:terminus:size=11,xft:Droid Sans Mono for Powerline:size=11
 ! URxvt*font:                             -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:pixelsize:12
 ! URxvt*font:                             -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:pixelsize:12
 ! URxvt*boldFont:                         -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:bold:pixelsize:12
@@ -308,3 +322,75 @@ URxvt*matcher.button:                 1
 
 ! URxvt*remote-clipboard.fetch:         string
 ! URxvt*remote-clipboard.store:         string
+
+
+
+
+! Solarized color scheme for the X Window System
+!
+! http://ethanschoonover.com/solarized
+! Common
+
+#define S_yellow #b58900
+#define S_orange #cb4b16
+#define S_red #dc322f
+#define S_magenta #d33682
+#define S_violet #6c71c4
+#define S_blue #268bd2
+#define S_cyan #2aa198
+#define S_green #859900
+
+! Dark
+
+#define S_base03 #002b36
+#define S_base02 #073642
+#define S_base01 #586e75
+#define S_base00 #657b83
+#define S_base0 #839496
+#define S_base1 #93a1a1
+#define S_base2 #eee8d5
+#define S_base3 #fdf6e3
+
+
+! Light
+
+! #define S_base03 #fdf6e3
+! #define S_base02 #eee8d5
+! #define S_base01 #93a1a1
+! #define S_base00 #839496
+! #define S_base0 #657b83
+! #define S_base1 #586e75
+! #define S_base2 #073642
+! #define S_base3 #002b36
+
+
+! To only apply colors to your terminal, for example, prefix
+! the color assignment statement with its name. Example:
+!
+! URxvt*background: S_base03
+
+URxvt*background: S_base03
+URxvt*foreground: S_base0
+URxvt*fading: 40
+URxvt*fadeColor: S_base03
+URxvt*cursorColor: S_base1
+URxvt*pointerColorBackground: S_base01
+URxvt*pointerColorForeground: S_base1
+
+URxvt*color0: S_base02
+URxvt*color1: S_red
+URxvt*color2: S_green
+URxvt*color3: S_yellow
+URxvt*color4: S_blue
+URxvt*color5: S_magenta
+URxvt*color6: S_cyan
+URxvt*color7: S_base2
+URxvt*color8: S_base03
+URxvt*color9: S_orange
+URxvt*color10: S_base01
+URxvt*color11: S_base00
+URxvt*color12: S_base0
+URxvt*color13: S_violet
+URxvt*color14: S_base1
+URxvt*color15: S_base3
+

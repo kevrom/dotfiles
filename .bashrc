@@ -11,8 +11,8 @@ export EDITOR='/usr/bin/vim'
 alias ls='ls --color=auto'
 alias lsa='ls -a --color=auto'
 alias svim='sudo vim'
+alias vims='vim -S Session.vim'
 alias sk='ssh kevrom@sticky-keys.com'
-
 
 function shortwd() {
     num_dirs=3

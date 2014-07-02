@@ -86,7 +86,7 @@ set incsearch
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " Open NERDTree if no files specified on startup
-autocmd vimenter * if !argc() | NERDTree | endif
+" autocmd vimenter * if !argc() | NERDTree | endif
 
 " Remaps
 map <C-n> :NERDTreeToggle<CR>
