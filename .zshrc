@@ -55,14 +55,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+export LANG=en_US.UTF-8
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -77,3 +70,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 #
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
+
+# Load in .Xresources
+xrdb ~/.Xresources
