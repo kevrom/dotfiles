@@ -12,14 +12,12 @@ Plugin 'tpope/vim-obsession'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-surround'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'goatslacker/mango.vim'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'walm/jshint.vim'
 Plugin 'moll/vim-node'
 Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'vim-scripts/CSApprox'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
 Plugin '1995eaton/vim-better-javascript-completion'
@@ -27,7 +25,17 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'elzr/vim-json'
+
+" Color schemes
 Plugin 'desert256.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'goatslacker/mango.vim'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'Lokaltog/vim-distinguished'
+Plugin 'wombat256.vim'
+Plugin 'tomasr/molokai'
+
 
 " End plugin list
 call vundle#end()
@@ -36,11 +44,12 @@ filetype plugin indent on
 set t_Co=256
 
 " Set color scheme
-" Available schemes: mango, desert256, solarized
 set background=dark
-colorscheme solarized
+colorscheme molokai
 
+" Color scheme options
 let g:solarized_termcolors=256
+let g:rehash256=1
 
 syntax on	" turn on syntax
 
@@ -50,7 +59,6 @@ au BufRead,BufNewFile *.md set filetype=markdown
 set mouse=a	" enable mouse support if available
 
 set tabstop=4
-set softtabstop=4
 set shiftwidth=4
 set showmatch
 set ignorecase
