@@ -70,6 +70,3 @@ export LANG=en_US.UTF-8
 #
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
-
-# Load in .Xresources
-xrdb ~/.Xresources
