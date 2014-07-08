@@ -15,9 +15,6 @@ chatnets = {
     max_kicks = "1";
     max_msgs = "4";
     max_whois = "1";
-  };
-  OFTC = {
-    type = "IRC";
     autosendcmd = "/^msg nickserv identify onetwo12;wait 2000";
   };
 };
