@@ -25,6 +25,7 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'elzr/vim-json'
+Plugin 'fholgado/minibufexpl.vim'
 
 " Color schemes
 Plugin 'desert256.vim'
@@ -98,6 +99,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " Remaps
 map <C-n> :NERDTreeToggle<CR>
+noremap <S-l> gt
+noremap <S-h> gT
 
 " Enable airline tabs
 let g:airline#extensions#tabline#enabled = 1
@@ -110,3 +113,4 @@ endif
 let g:airline_symbols.space = "\ua0"
 
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
