@@ -70,3 +70,7 @@ export LANG=en_US.UTF-8
 #
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
+alias sk="ssh kevrom@sticky-keys.com"
+alias svim="sudo vim"
+alias vims="vim -S Session.vim"
+
