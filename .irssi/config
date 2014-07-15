@@ -187,5 +187,5 @@ statusbar = {
 settings = {
   core = { real_name = "Unknown"; user_name = "kevrom"; nick = "kevrom"; };
   "fe-text" = { actlist_sort = "refnum"; };
-  "fe-common/core" = { theme = "xchat"; };
+  "fe-common/core" = { theme = "simple"; };
 };
