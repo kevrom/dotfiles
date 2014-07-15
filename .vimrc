@@ -25,7 +25,10 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'elzr/vim-json'
-Plugin 'fholgado/minibufexpl.vim'
+" Plugin 'fholgado/minibufexpl.vim'
+Plugin 'vim-scripts/JavaScript-Indent'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdcommenter'
 
 " Color schemes
 Plugin 'desert256.vim'
@@ -101,6 +104,32 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 map <C-n> :NERDTreeToggle<CR>
 noremap <S-l> gt
 noremap <S-h> gT
+" inoremap ( ()<Esc>:call BC_AddChar(")")<CR>i
+inoremap { {<CR>}<Esc>:call BC_AddChar("}")<CR><Esc>kA<CR>
+inoremap [ []<Esc>:call BC_AddChar("]")<CR>i
+inoremap " ""<Esc>:call BC_AddChar("\"")<CR>i
+inoremap ' ''<Esc>:call BC_AddChar("\"")<CR>i
+" jump out of parenthesis
+inoremap <C-j> <Esc>:call search(BC_GetChar(), "W")<CR>a
+
+set pastetoggle=<F10>
+
+function! BC_AddChar(schar)
+	if exists("b:robstack")
+		let b:robstack = b:robstack . a:schar
+	else
+		let b:robstack = a:schar
+	endif
+endfunction
+
+function! BC_GetChar()
+	let l:char = b:robstack[strlen(b:robstack)-1]
+	let b:robstack = strpart(b:robstack, 0, strlen(b:robstack)-1)
+	return l:char
+endfunction
+
+
+
 
 " Enable airline tabs
 let g:airline#extensions#tabline#enabled = 1
