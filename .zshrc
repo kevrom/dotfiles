@@ -7,6 +7,10 @@ ZSH=/usr/share/oh-my-zsh/
 # time that oh-my-zsh is loaded.
 ZSH_THEME="agnoster"
 
+# Set default user so host/user only shows up during SSH sessions
+# into other systems
+DEFAULT_USER="kevrom"
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
