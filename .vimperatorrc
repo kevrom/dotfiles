@@ -1,0 +1,13 @@
+"3.8.2 (created: 2014/02/13 23:52:43)
+
+source! /home/kevrom/.vimperatorrc.local
+
+" vim: set ft=vimperator:
+
+" Set Titlestring
+set titlestring="Fuck Off"
+
+" Set Remappings
+noremap j 5j
+noremap k 5k
+
