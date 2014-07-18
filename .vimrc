@@ -29,6 +29,7 @@ Plugin 'elzr/vim-json'
 Plugin 'vim-scripts/JavaScript-Indent'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'kien/ctrlp.vim'
 
 " Color schemes
 Plugin 'desert256.vim'
@@ -104,13 +105,22 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 map <C-n> :NERDTreeToggle<CR>
 noremap <S-l> gt
 noremap <S-h> gT
-" inoremap ( ()<Esc>:call BC_AddChar(")")<CR>i
+inoremap ( ()<Esc>:call BC_AddChar(")")<CR>i
 inoremap { {<CR>}<Esc>:call BC_AddChar("}")<CR><Esc>kA<CR>
 inoremap [ []<Esc>:call BC_AddChar("]")<CR>i
 inoremap " ""<Esc>:call BC_AddChar("\"")<CR>i
 inoremap ' ''<Esc>:call BC_AddChar("\"")<CR>i
 " jump out of parenthesis
 inoremap <C-j> <Esc>:call search(BC_GetChar(), "W")<CR>a
+
+" Remap CtrlP to open in tab
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
+
+" Ignore certain directories with CtrlP
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
 set pastetoggle=<F10>
 

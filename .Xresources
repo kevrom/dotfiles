@@ -325,6 +325,7 @@ URxvt*matcher.button:                 1
 
 
 #define S_base03        #002b36
+#define S_base04        #1c1c1c
 #define S_base02        #073642
 #define S_base01        #586e75
 #define S_base00        #657b83
@@ -351,7 +352,7 @@ URxvt*matcher.button:                 1
 
 !! black dark/light
 *color0:                S_base02
-*color8:                S_base03
+*color8:                S_base04
 
 !! red dark/light
 *color1:                S_red
