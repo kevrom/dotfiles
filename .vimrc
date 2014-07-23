@@ -19,7 +19,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'vim-scripts/CSApprox'
 Plugin 'bling/vim-airline'
-Plugin 'ervandew/supertab'
+" Plugin 'ervandew/supertab'
 Plugin '1995eaton/vim-better-javascript-completion'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'jistr/vim-nerdtree-tabs'
@@ -30,6 +30,10 @@ Plugin 'vim-scripts/JavaScript-Indent'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'honza/vim-snippets'
 
 " Color schemes
 Plugin 'desert256.vim'
@@ -105,13 +109,13 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 map <C-n> :NERDTreeToggle<CR>
 noremap <S-l> gt
 noremap <S-h> gT
-inoremap ( ()<Esc>:call BC_AddChar(")")<CR>i
-inoremap { {<CR>}<Esc>:call BC_AddChar("}")<CR><Esc>kA<CR>
-inoremap [ []<Esc>:call BC_AddChar("]")<CR>i
-inoremap " ""<Esc>:call BC_AddChar("\"")<CR>i
-inoremap ' ''<Esc>:call BC_AddChar("\"")<CR>i
+" inoremap ( ()<Esc>:call BC_AddChar(")")<CR>i
+" inoremap { {<CR>}<Esc>:call BC_AddChar("}")<CR><Esc>kA<CR>
+" inoremap [ []<Esc>:call BC_AddChar("]")<CR>i
+" inoremap \" \""<Esc>:call BC_AddChar("\"")<CR>i
+" inoremap ' ''<Esc>:call BC_AddChar("\"")<CR>i
 " jump out of parenthesis
-inoremap <C-j> <Esc>:call search(BC_GetChar(), "W")<CR>a
+" inoremap <C-j> <Esc>:call search(BC_GetChar(), "W")<CR>a
 
 " Remap CtrlP to open in tab
 let g:ctrlp_prompt_mappings = {
@@ -121,6 +125,42 @@ let g:ctrlp_prompt_mappings = {
 
 " Ignore certain directories with CtrlP
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+
+" UltiSnips configuration
+function! g:UltiSnips_Complete()
+	call UltiSnips#ExpandSnippetOrJump()
+	if g:ulti_expand_or_jump_res == 0
+		if pumvisible()
+			return "\<C-N>"
+		else
+			return "\<TAB>"
+		endif
+	endif
+
+	return ""
+	endif
+endfunction
+
+function! g:UltiSnips_Reverse()
+	call UltiSnips#JumpBackwards()
+	if g:ulti_jump_backwards_res == 0
+		return "\<C-P>"
+	endif
+
+	return ""
+endfunction
+
+au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+au BufEnter * exec "inoremap <silent> " . g:UltiSnipsJumpBackwardTrigger . " <C-R>=g:UltiSnips_Reverse()<cr>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-e>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" this mapping Enter key to <C-y> to chose the current highlight item
+" and close the selection list, same as other IDEs.
+" CONFLICT with some plugins like tpope/Endwise
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+
 
 set pastetoggle=<F10>
 

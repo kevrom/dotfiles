@@ -44,3 +44,5 @@ PS1+='\[\033[32;1m\]$(date +%H:%M)'
 PS1+='\[\033[36;1m\] ]'
 PS1+='\[\033[00m\] $ '
 
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

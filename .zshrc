@@ -78,3 +78,5 @@ alias sk="ssh kevrom@sticky-keys.com"
 alias svim="sudo vim"
 alias vims="vim -S Session.vim"
 
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
