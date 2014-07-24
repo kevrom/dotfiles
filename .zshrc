@@ -78,5 +78,8 @@ alias sk="ssh kevrom@sticky-keys.com"
 alias svim="sudo vim"
 alias vims="vim -S Session.vim"
 
-
+# Add Ruby Version Manager to path
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# Start TMUX if it isn't running
+if [ "$TMUX" = "" ]; then tmux; fi
