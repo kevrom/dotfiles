@@ -102,20 +102,10 @@ set incsearch
 " Close NERDTree if no other buffers present
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-" Open NERDTree if no files specified on startup
-" autocmd vimenter * if !argc() | NERDTree | endif
-
 " Remaps
-map <C-n> :NERDTreeToggle<CR>
-noremap <S-l> gt
-noremap <S-h> gT
-" inoremap ( ()<Esc>:call BC_AddChar(")")<CR>i
-" inoremap { {<CR>}<Esc>:call BC_AddChar("}")<CR><Esc>kA<CR>
-" inoremap [ []<Esc>:call BC_AddChar("]")<CR>i
-" inoremap \" \""<Esc>:call BC_AddChar("\"")<CR>i
-" inoremap ' ''<Esc>:call BC_AddChar("\"")<CR>i
-" jump out of parenthesis
-" inoremap <C-j> <Esc>:call search(BC_GetChar(), "W")<CR>a
+noremap <C-n> :NERDTreeToggle<CR>
+map <S-l> gt
+map <S-h> gT
 
 " Remap CtrlP to open in tab
 let g:ctrlp_prompt_mappings = {
@@ -162,23 +152,8 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 
-
+" A way to toggle PASTE mode
 set pastetoggle=<F10>
-
-function! BC_AddChar(schar)
-	if exists("b:robstack")
-		let b:robstack = b:robstack . a:schar
-	else
-		let b:robstack = a:schar
-	endif
-endfunction
-
-function! BC_GetChar()
-	let l:char = b:robstack[strlen(b:robstack)-1]
-	let b:robstack = strpart(b:robstack, 0, strlen(b:robstack)-1)
-	return l:char
-endfunction
-
 
 
 

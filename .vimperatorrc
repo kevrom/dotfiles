@@ -10,4 +10,6 @@ set titlestring="Fuck Off"
 " Set Remappings
 noremap j 5j
 noremap k 5k
+noremap <C-]> gt
+noremap <C-[> gT
 
