@@ -127,6 +127,7 @@ let g:ctrlp_prompt_mappings = {
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
 " UltiSnips configuration
+let g:UltiSnipsEditSplit = 'vertical'
 function! g:UltiSnips_Complete()
 	call UltiSnips#ExpandSnippetOrJump()
 	if g:ulti_expand_or_jump_res == 0

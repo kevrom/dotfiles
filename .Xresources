@@ -155,7 +155,7 @@ URxvt*mouseWheelScrollPage:             true
 ! URxvt*iconName:                       string
 
 ! Set the application icon pixmap; option -icon.
-URxvt*iconFile:                       /usr/share/icons/gnome/48x48/apps/ksysguard.png
+URxvt*iconFile:                       /usr/share/icons/gnome/scalable/apps/vim.png
 
 ! Set window title string, the default title is the command-line specified after the -e option, if any, otherwise the application name
 URxvt*title:                         the terminal 
