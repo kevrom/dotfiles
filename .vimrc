@@ -73,7 +73,8 @@ set showmatch
 set ignorecase
 set smartcase
 set autoindent
-set textwidth=79
+set textwidth=0
+set wrapmargin=0
 
 set backspace=indent,eol,start
 
