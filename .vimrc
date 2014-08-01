@@ -34,6 +34,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'honza/vim-snippets'
+Plugin 'godlygeek/tabular'
 
 " Color schemes
 Plugin 'desert256.vim'
