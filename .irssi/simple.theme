@@ -1,4 +1,3 @@
-
 # default foreground color (%N) - -1 is the "default terminal color"
 default_color = "-1";
 
