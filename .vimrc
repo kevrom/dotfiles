@@ -97,6 +97,7 @@ set laststatus=2
 set cursorline
 set nohlsearch
 set incsearch
+set clipboard^=unnamed
 
 " Close NERDTree if no other buffers present
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
