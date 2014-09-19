@@ -88,3 +88,5 @@ source /usr/bin/virtualenvwrapper.sh
 
 # Start TMUX if it isn't running
 if [ "$TMUX" = "" ]; then tmux; fi
+
+export TEMP=/home/kevrom/tmp
