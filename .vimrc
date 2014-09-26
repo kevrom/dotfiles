@@ -102,8 +102,8 @@ set clipboard^=unnamed
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " Set up backup and temp dirs
-set backupdir=$TEMP//
-set directory=$TEMP//
+set backupdir=$VIMTEMP//
+set directory=$VIMTEMP//
 
 " Remaps
 noremap <C-n> :NERDTreeToggle<CR>
