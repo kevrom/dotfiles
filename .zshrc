@@ -77,8 +77,8 @@ alias zshconfig="vim ~/.zshrc"
 alias svim="sudo vim"
 alias vims="vim -S Session.vim"
 
-# Add Ruby Version Manager to path
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# Add Ruby to path
+export PATH="$PATH:/home/kevrom/.gem/ruby/2.1.0/bin"
 
 # Virtualenv
 export WORKON_HOME=$HOME/.virtualenvs

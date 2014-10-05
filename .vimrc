@@ -31,6 +31,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
+Plugin 'mustache/vim-mustache-handlebars'
 
 " Color schemes
 Plugin 'desert256.vim'
