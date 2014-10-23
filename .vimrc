@@ -4,34 +4,25 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Manage vundle plugins
+" Manage vundle
 Plugin 'gmarik/Vundle.vim'
+
+" General
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-obsession'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-surround'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'walm/jshint.vim'
-Plugin 'moll/vim-node'
-Plugin 'pangloss/vim-javascript'
-Plugin 'jelera/vim-javascript-syntax'
 Plugin 'vim-scripts/CSApprox'
 Plugin 'bling/vim-airline'
-Plugin '1995eaton/vim-better-javascript-completion'
 Plugin 'edkolev/tmuxline.vim'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'elzr/vim-json'
-Plugin 'vim-scripts/JavaScript-Indent'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
-Plugin 'marijnh/tern_for_vim'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
-Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'majutsushi/tagbar'
+Plugin 'Raimondi/delimitMate'
 
 " Color schemes
 Plugin 'desert256.vim'
@@ -43,6 +34,25 @@ Plugin 'Lokaltog/vim-distinguished'
 Plugin 'wombat256.vim'
 Plugin 'tomasr/molokai'
 
+" Template
+Plugin 'digitaltoad/vim-jade'
+Plugin 'mustache/vim-mustache-handlebars'
+
+" Javascript / JSON
+Plugin 'walm/jshint.vim'
+Plugin 'moll/vim-node'
+Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin '1995eaton/vim-better-javascript-completion'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'elzr/vim-json'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'marijnh/tern_for_vim'
+
+" Go
+Plugin 'fatih/vim-go'
+Plugin 'jstemmer/gotags'
 
 " End plugin list
 call vundle#end()
@@ -59,6 +69,7 @@ let g:solarized_termcolors=256
 let g:rehash256=1
 
 syntax on	" turn on syntax
+let mapleader=","
 
 " au BufRead,BufNewFile *.scss set filetype=css
 au BufRead,BufNewFile *.md set filetype=markdown
@@ -112,6 +123,38 @@ map <S-l> gt
 map <S-h> gT
 " ctrl-p
 nmap ; :CtrlPBuffer<CR>
+nmap <F8> :TagbarToggle<CR>
+
+
+" Golang tagbar config
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
+
 
 " Remap CtrlP to open in tab
 let g:ctrlp_prompt_mappings = {
@@ -125,9 +168,6 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|sv
 
 " A way to toggle PASTE mode
 set pastetoggle=<F10>
-
-" Easytags
-let g:easytags_async = 1
 
 
 " Enable airline tabs

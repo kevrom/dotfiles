@@ -78,7 +78,11 @@ alias svim="sudo vim"
 alias vims="vim -S Session.vim"
 
 # Add Ruby to path
-export PATH="$PATH:/home/kevrom/.gem/ruby/2.1.0/bin"
+export PATH="$PATH:$HOME/.gem/ruby/2.1.0/bin"
+
+# Set GOPATH
+export GOPATH=$HOME/.go
+export PATH="#$PATH:$HOME/.go/bin"
 
 # Virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
