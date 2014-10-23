@@ -81,8 +81,8 @@ alias vims="vim -S Session.vim"
 export PATH="$PATH:$HOME/.gem/ruby/2.1.0/bin"
 
 # Set GOPATH
-export GOPATH=$HOME/.go
-export PATH="#$PATH:$HOME/.go/bin"
+export GOPATH=$HOME/projects/go
+export PATH="#$PATH:$HOME/projects/go/bin"
 
 # Virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
