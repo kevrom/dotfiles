@@ -33,6 +33,7 @@ Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'Lokaltog/vim-distinguished'
 Plugin 'wombat256.vim'
 Plugin 'tomasr/molokai'
+Plugin 'freeo/vim-kalisi'
 
 " Template
 Plugin 'digitaltoad/vim-jade'
@@ -59,6 +60,8 @@ call vundle#end()
 filetype plugin indent on
 
 set t_Co=256
+let &t_AB="\e[48;5;%dm"
+let &t_AF="\e[38;5;%dm"
 
 " Set color scheme
 set background=dark
@@ -124,7 +127,7 @@ map <S-h> gT
 " ctrl-p
 nmap ; :CtrlPBuffer<CR>
 nmap <F8> :TagbarToggle<CR>
-
+inoremap {<CR> {<CR>}<C-o>O
 
 " Golang tagbar config
 let g:tagbar_type_go = {
