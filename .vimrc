@@ -38,6 +38,7 @@ Plugin 'freeo/vim-kalisi'
 " Template
 Plugin 'digitaltoad/vim-jade'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'briancollins/vim-jst'
 
 " Javascript / JSON
 Plugin 'walm/jshint.vim'
@@ -172,6 +173,8 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|sv
 " A way to toggle PASTE mode
 set pastetoggle=<F10>
 
+" Retab
+nnoremap <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
 
 " Enable airline tabs
 let g:airline#extensions#tabline#enabled = 1
