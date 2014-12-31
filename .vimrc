@@ -42,6 +42,9 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'briancollins/vim-jst'
 
+" HTML
+Plugin 'mattn/emmet-vim'
+
 " Javascript / JSON
 Plugin 'walm/jshint.vim'
 Plugin 'moll/vim-node'
@@ -73,6 +76,9 @@ colorscheme molokai
 " Color scheme options
 let g:solarized_termcolors=256
 let g:rehash256=1
+
+" Emmet options
+let g:user_emmet_leader_key='<C-X>'
 
 syntax on	" turn on syntax
 let mapleader=","
