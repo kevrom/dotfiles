@@ -131,8 +131,8 @@ set directory=$VIMTEMP//
 
 " Remaps
 noremap <C-n> :NERDTreeToggle<CR>
-map <S-l> :gn<CR>
-map <S-h> :gp<CR>
+map <S-l> :bn<CR>
+map <S-h> :bp<CR>
 " ctrl-p
 nmap ; :CtrlPBuffer<CR>
 nmap <F8> :TagbarToggle<CR>
