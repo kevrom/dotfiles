@@ -158,12 +158,10 @@ map <silent> <S-h> :call SwitchToNextBuffer(-1)<CR>
 
 " Remaps
 noremap <C-n> :NERDTreeToggle<CR>
-"map <S-l> :bn<CR>
-"map <S-h> :bp<CR>
 " ctrl-p
 nmap ; :CtrlPBuffer<CR>
 nmap <F8> :TagbarToggle<CR>
-inoremap {<CR> {<CR>}<C-o>O
+"inoremap {<CR> {<CR>}<C-o>O
 
 " Golang tagbar config
 let g:tagbar_type_go = {
@@ -194,12 +192,6 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
-
-" Remap CtrlP to open in tab
-"let g:ctrlp_prompt_mappings = {
-    "\ 'AcceptSelection("e")': ['<c-t>'],
-    "\ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-    "\ }
 
 " Ignore certain directories with CtrlP
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
