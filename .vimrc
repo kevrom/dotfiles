@@ -130,10 +130,36 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 set backupdir=$VIMTEMP//
 set directory=$VIMTEMP//
 
+function! SwitchToNextBuffer(incr)
+  let help_buffer = (&filetype == 'help')
+  let current = bufnr("%")
+  let last = bufnr("$")
+  let new = current + a:incr
+  while 1
+    if new != 0 && bufexists(new) && ((getbufvar(new, "&filetype") == 'help') == help_buffer)
+      execute ":buffer ".new
+      break
+    else
+      let new = new + a:incr
+      if new < 1
+        let new = last
+      elseif new > last
+        let new = 1
+      endif
+      if new == current
+        break
+      endif
+    endif
+  endwhile
+endfunction
+
+map <silent> <S-l> :call SwitchToNextBuffer(1)<CR>
+map <silent> <S-h> :call SwitchToNextBuffer(-1)<CR>
+
 " Remaps
 noremap <C-n> :NERDTreeToggle<CR>
-map <S-l> :bn<CR>
-map <S-h> :bp<CR>
+"map <S-l> :bn<CR>
+"map <S-h> :bp<CR>
 " ctrl-p
 nmap ; :CtrlPBuffer<CR>
 nmap <F8> :TagbarToggle<CR>
