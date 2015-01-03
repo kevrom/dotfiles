@@ -130,38 +130,15 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 set backupdir=$VIMTEMP//
 set directory=$VIMTEMP//
 
-function! SwitchToNextBuffer(incr)
-  let help_buffer = (&filetype == 'help')
-  let current = bufnr("%")
-  let last = bufnr("$")
-  let new = current + a:incr
-  while 1
-    if new != 0 && bufexists(new) && ((getbufvar(new, "&filetype") == 'help') == help_buffer)
-      execute ":buffer ".new
-      break
-    else
-      let new = new + a:incr
-      if new < 1
-        let new = last
-      elseif new > last
-        let new = 1
-      endif
-      if new == current
-        break
-      endif
-    endif
-  endwhile
-endfunction
-
-map <silent> <S-l> :call SwitchToNextBuffer(1)<CR>
-map <silent> <S-h> :call SwitchToNextBuffer(-1)<CR>
+nnoremap <S-l> :bn<CR>
+nnoremap <S-h> :bp<CR>
 
 " Remaps
 noremap <C-n> :NERDTreeToggle<CR>
 " ctrl-p
 nmap ; :CtrlPBuffer<CR>
 nmap <F8> :TagbarToggle<CR>
-"inoremap {<CR> {<CR>}<C-o>O
+inoremap {<CR> {<CR>}<C-o>O
 
 " Golang tagbar config
 let g:tagbar_type_go = {
@@ -202,9 +179,6 @@ set pastetoggle=<F10>
 
 " Retab
 nnoremap <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
-
-" Enable airline tabs
-let g:airline#extensions#tabline#enabled = 1
 
 " Enable glyphs for powerline
 let g:airline_powerline_fonts = 1

@@ -75,7 +75,7 @@ export LANG=en_US.UTF-8
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
 alias svim="sudo vim"
-alias vims="vim -S Session.vim"
+alias vim="vim -u ~/.vimrc"
 
 # Add Ruby to path
 export PATH="$PATH:$HOME/.gem/ruby/2.1.0/bin"
