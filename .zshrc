@@ -78,7 +78,7 @@ alias svim="sudo vim"
 alias vim="vim -u ~/.vimrc"
 
 # Add Ruby to path
-export PATH="$PATH:$HOME/.gem/ruby/2.1.0/bin"
+export PATH="$PATH:$HOME/.gem/ruby/2.2.0/bin"
 
 # Set GOPATH
 export GOPATH=$HOME/projects/go
@@ -88,8 +88,5 @@ export PATH="#$PATH:$HOME/projects/go/bin"
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/directory-you-do-development-in
 source /usr/bin/virtualenvwrapper.sh
-
-# Start TMUX if it isn't running
-if [ "$TMUX" = "" ]; then tmux; fi
 
 export VIMTEMP=/home/kevrom/.vim/temp
