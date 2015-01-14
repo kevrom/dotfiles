@@ -61,6 +61,11 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'fatih/vim-go'
 Plugin 'jstemmer/gotags'
 
+" Clojure
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
+Plugin 'kien/rainbow_parentheses.vim'
+
 " End plugin list
 call vundle#end()
 filetype plugin indent on
