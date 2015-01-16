@@ -145,6 +145,13 @@ nmap ; :CtrlPBuffer<CR>
 nmap <F8> :TagbarToggle<CR>
 inoremap {<CR> {<CR>}<C-o>O
 
+nnoremap <Down> :m .+1<CR>==
+nnoremap <Up> :m .-2<CR>==
+inoremap <Down> <Esc>:m .+1<CR>==gi
+inoremap <Up> <Esc>:m .-2<CR>==gi
+vnoremap <Down> :m '>+1<CR>gv=gv
+vnoremap <Up> :m '<-2<CR>gv=gv
+
 " Golang tagbar config
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
