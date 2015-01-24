@@ -90,3 +90,6 @@ export PROJECT_HOME=$HOME/directory-you-do-development-in
 source /usr/bin/virtualenvwrapper.sh
 
 export VIMTEMP=/home/kevrom/.vim/temp
+
+export NVM_DIR="/home/kevrom/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

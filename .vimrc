@@ -83,10 +83,11 @@ let g:solarized_termcolors=256
 let g:rehash256=1
 
 " Emmet options
-let g:user_emmet_leader_key='<C-X>'
+let g:user_emmet_leader_key='<C-x>'
 
 syntax on	" turn on syntax
-let mapleader=","
+let mapleader=" "
+nnoremap <SPACE> <Nop>
 
 " au BufRead,BufNewFile *.scss set filetype=css
 au BufRead,BufNewFile *.md set filetype=markdown
