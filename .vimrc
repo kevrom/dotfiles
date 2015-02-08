@@ -89,8 +89,10 @@ syntax on	" turn on syntax
 let mapleader=" "
 nnoremap <SPACE> <Nop>
 
-" au BufRead,BufNewFile *.scss set filetype=css
-au BufRead,BufNewFile *.md set filetype=markdown
+augroup filetypedetect
+	autocmd BufRead,BufNewFile *.md :set filetype=markdown
+	autocmd BufRead,BufNewFile *.tag :set filetype=html
+augroup END
 
 set mouse=a	" enable mouse support if available
 

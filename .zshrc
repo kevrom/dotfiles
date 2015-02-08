@@ -77,6 +77,9 @@ alias zshconfig="vim ~/.zshrc"
 alias svim="sudo vim"
 alias vim="vim -u ~/.vimrc"
 
+# Add ~/bin to path
+export PATH="$PATH:$HOME/bin"
+
 # Add Ruby to path
 export PATH="$PATH:$HOME/.gem/ruby/2.2.0/bin"
 
@@ -93,3 +96,4 @@ export VIMTEMP=/home/kevrom/.vim/temp
 
 export NVM_DIR="/home/kevrom/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+PATH="/usr/local/heroku/bin:$PATH"
