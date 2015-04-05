@@ -24,7 +24,7 @@ DISABLE_AUTO_UPDATE="true"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+ DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -79,6 +79,8 @@ alias vim="vim -u ~/.vimrc"
 
 # Add ~/bin to path
 export PATH="$PATH:$HOME/bin"
+
+export CHROME_BIN="/usr/bin/google-chrome-unstable"
 
 # Add Ruby to path
 export PATH="$PATH:$HOME/.gem/ruby/2.2.0/bin"

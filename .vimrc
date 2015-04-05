@@ -45,6 +45,9 @@ Plugin 'briancollins/vim-jst'
 " HTML
 Plugin 'mattn/emmet-vim'
 
+" LaTeX
+"Plugin 'vim-latex/vim-latex'
+
 " Javascript / JSON
 Plugin 'walm/jshint.vim'
 Plugin 'moll/vim-node'
@@ -186,8 +189,10 @@ let g:tagbar_type_go = {
 
 
 " Ignore certain directories with CtrlP
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|assets)|(\.(swp|ico|git|svn))$'
 
+" Space2tab command
+:command! -range=% -nargs=0 Space2Tab execute '<line1>,<line2>s#^\( \{'.&ts.'\}\)\+#\=repeat("\t", len(submatch(0))/' . &ts . ')'
 
 " A way to toggle PASTE mode
 set pastetoggle=<F10>
