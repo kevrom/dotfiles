@@ -8,7 +8,7 @@ URxvt*termName:                         screen-256color
 ! Create the window with the specified X window geometry [default 80x24]
 URxvt*geometry:                         148x40
 
-! True: start as a login shell by prepending a - to argv[0] of the shell; option -ls.  False: start as a normal sub-shell [default]; 
+! True: start as a login shell by prepending a - to argv[0] of the shell; option -ls.  False: start as a normal sub-shell [default];
 URxvt*loginShell:                       false
 
 ! Use the specified colour for the scrollbar [default #B2B2B2]
@@ -63,7 +63,7 @@ URxvt*thickness:	                    5
 ! Darken (0 .. 99) or lighten (101 .. 200) the transparent background.  A value of 100 means no shading
 ! URxvt*shading:                        number
 
-! Apply gaussian blur with the specified radius to the transparent background. If a single number is specified, the vertical and horizontal radii are considered to be the same. 
+! Apply gaussian blur with the specified radius to the transparent background. If a single number is specified, the vertical and horizontal radii are considered to be the same.
 ! Setting one of the radii to 1 and the other to a large number creates interesting effects on some backgrounds. The maximum radius value is 128. An horizontal or vertical radius of 0 disables blur
 ! URxvt*blurRadius:                     HxV
 
@@ -158,7 +158,7 @@ URxvt*mouseWheelScrollPage:             true
 URxvt*iconFile:                       /usr/share/icons/gnome/scalable/apps/vim.png
 
 ! Set window title string, the default title is the command-line specified after the -e option, if any, otherwise the application name
-URxvt*title:                         the terminal 
+URxvt*title:                         no diggity
 
 
 
@@ -166,7 +166,7 @@ URxvt*title:                         the terminal
 
 ! Select the fonts to be used. This is a comma separated list of font names that are checked in order when trying to find glyphs for characters
 
-URxvt*font:                           xft:terminus:size=11,xft:Droid Sans Mono for Powerline:size=11
+URxvt*font:                           xft:Droid Sans Mono for Powerline:size=12
 ! URxvt*font:                             -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:pixelsize:12
 ! URxvt*font:                             -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:pixelsize:12
 ! URxvt*boldFont:                         -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:bold:pixelsize:12
