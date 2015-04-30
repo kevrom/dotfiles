@@ -55,13 +55,13 @@ URxvt*scrollBar_floating:               false
 URxvt*thickness:	                    5
 
 ! Turn on/off pseudo-transparency by using the root pixmap as background
-! URxvt*transparent:                    boolean
+URxvt*transparent:                    true
 
 ! Tint the transparent background with the given colour. Note that a black tint yields a completely black image while a white tint yields the image unchanged.
 ! URxvt*tintColor:                      color
 
 ! Darken (0 .. 99) or lighten (101 .. 200) the transparent background.  A value of 100 means no shading
-! URxvt*shading:                        number
+URxvt*shading:                        20
 
 ! Apply gaussian blur with the specified radius to the transparent background. If a single number is specified, the vertical and horizontal radii are considered to be the same.
 ! Setting one of the radii to 1 and the other to a large number creates interesting effects on some backgrounds. The maximum radius value is 128. An horizontal or vertical radius of 0 disables blur
