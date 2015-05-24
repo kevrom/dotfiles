@@ -48,6 +48,9 @@ Plugin 'mattn/emmet-vim'
 " LaTeX
 "Plugin 'vim-latex/vim-latex'
 
+" Rust
+Plugin 'rust-lang/rust.vim'
+
 " Javascript / JSON
 Plugin 'walm/jshint.vim'
 Plugin 'moll/vim-node'
@@ -96,6 +99,7 @@ augroup filetypedetect
 	autocmd BufRead,BufNewFile *.md :set filetype=markdown
 	autocmd BufRead,BufNewFile *.tag :set filetype=html
 augroup END
+autocmd FileType rs setlocal shiftwidth=4 tabstop=4 :set expandtab
 
 set mouse=a	" enable mouse support if available
 
