@@ -25,6 +25,9 @@ Plugin 'majutsushi/tagbar'
 Plugin 'Raimondi/delimitMate'
 Plugin 'benmills/vimux'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " Color schemes
 Plugin 'desert256.vim'
@@ -52,12 +55,11 @@ Plugin 'mattn/emmet-vim'
 Plugin 'rust-lang/rust.vim'
 
 " Javascript / JSON
-Plugin 'walm/jshint.vim'
+"Plugin 'walm/jshint.vim'
 Plugin 'moll/vim-node'
 Plugin 'pangloss/vim-javascript'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin '1995eaton/vim-better-javascript-completion'
-Plugin 'jistr/vim-nerdtree-tabs'
+"Plugin 'jelera/vim-javascript-syntax'
+"Plugin '1995eaton/vim-better-javascript-completion'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'elzr/vim-json'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -89,7 +91,7 @@ let g:solarized_termcolors=256
 let g:rehash256=1
 
 " Emmet options
-let g:user_emmet_leader_key='<C-x>'
+let g:user_emmet_leader_key=','
 
 syntax on	" turn on syntax
 let mapleader=" "
@@ -193,10 +195,13 @@ let g:tagbar_type_go = {
 
 
 " Ignore certain directories with CtrlP
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|assets)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|assets|lib)|(\.(swp|ico|git|svn))$'
 
 " Space2tab command
 :command! -range=% -nargs=0 Space2Tab execute '<line1>,<line2>s#^\( \{'.&ts.'\}\)\+#\=repeat("\t", len(submatch(0))/' . &ts . ')'
+
+" Ultisnips
+let g:UltiSnipsExpandTrigger="]]"
 
 " A way to toggle PASTE mode
 set pastetoggle=<F10>
