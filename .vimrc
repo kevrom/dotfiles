@@ -58,6 +58,7 @@ Plugin 'rust-lang/rust.vim'
 "Plugin 'walm/jshint.vim'
 Plugin 'moll/vim-node'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 "Plugin 'jelera/vim-javascript-syntax'
 "Plugin '1995eaton/vim-better-javascript-completion'
 Plugin 'cakebaker/scss-syntax.vim'
@@ -92,6 +93,9 @@ let g:rehash256=1
 
 " Emmet options
 let g:user_emmet_leader_key=','
+
+" JSX options
+let g:jsx_ext_required = 0
 
 syntax on	" turn on syntax
 let mapleader=" "
