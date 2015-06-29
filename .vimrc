@@ -207,6 +207,10 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|assets|lib)|(\.(swp
 " Ultisnips
 let g:UltiSnipsExpandTrigger="]]"
 
+" Syntastic
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_jsx_checkers = ['eslint']
+
 " A way to toggle PASTE mode
 set pastetoggle=<F10>
 

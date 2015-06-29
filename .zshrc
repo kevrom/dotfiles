@@ -78,7 +78,8 @@ alias svim="sudo vim"
 alias vim="vim -u ~/.vimrc"
 
 # Add ~/bin to path
-export PATH="$PATH:$HOME/bin"
+export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/scripts
 
 export CHROME_BIN="/usr/bin/google-chrome-unstable"
 
@@ -87,7 +88,7 @@ export PATH="$PATH:$HOME/.gem/ruby/2.2.0/bin"
 
 # Set GOPATH
 export GOPATH=$HOME/projects/go
-export PATH="#$PATH:$HOME/projects/go/bin"
+export PATH=$PATH:$HOME/projects/go/bin
 
 # Virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
