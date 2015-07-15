@@ -105,10 +105,12 @@ augroup filetypedetect
 	autocmd BufRead,BufNewFile *.md :set filetype=markdown
 	autocmd BufRead,BufNewFile *.tag :set filetype=html
 augroup END
-autocmd FileType rs setlocal shiftwidth=4 tabstop=4 :set expandtab
+autocmd FileType rs setlocal softtabstop=4 shiftwidth=4 tabstop=4 :set expandtab
 
 set mouse=a	" enable mouse support if available
 
+set expandtab
+set softtabstop=4
 set tabstop=4
 set shiftwidth=4
 set showmatch
@@ -199,7 +201,7 @@ let g:tagbar_type_go = {
 
 
 " Ignore certain directories with CtrlP
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|assets|lib)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|assets|jspm_packages)|(\.(swp|ico|git|svn))$'
 
 " Space2tab command
 :command! -range=% -nargs=0 Space2Tab execute '<line1>,<line2>s#^\( \{'.&ts.'\}\)\+#\=repeat("\t", len(submatch(0))/' . &ts . ')'
