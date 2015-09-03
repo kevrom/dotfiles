@@ -61,6 +61,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
