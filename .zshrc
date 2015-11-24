@@ -51,6 +51,9 @@ DISABLE_AUTO_UPDATE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+export LC_ALL=en_US.utf-8 
+export LANG="$LC_ALL"
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -102,3 +105,5 @@ export VIMTEMP=/home/kevrom/.vim/temp
 export NVM_DIR="/home/kevrom/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 PATH="/usr/local/heroku/bin:$PATH"
+
+nvm use v5.0.0

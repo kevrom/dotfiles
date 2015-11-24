@@ -57,10 +57,13 @@ Plugin 'rust-lang/rust.vim'
 " Javascript / JSON
 "Plugin 'walm/jshint.vim'
 Plugin 'moll/vim-node'
+"Plugin 'drslump/vim-syntax-js'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-"Plugin 'jelera/vim-javascript-syntax'
-"Plugin '1995eaton/vim-better-javascript-completion'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin '1995eaton/vim-better-javascript-completion'
+"Plugin 'othree/yajs.vim'
+"Plugin 'othree/es.next.syntax.vim'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'elzr/vim-json'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -108,7 +111,7 @@ augroup END
 autocmd FileType rs setlocal softtabstop=4 shiftwidth=4 tabstop=4 :set expandtab
 
 set mouse=a	" enable mouse support if available
-
+set encoding=utf-8
 set expandtab
 set softtabstop=4
 set tabstop=4
@@ -129,7 +132,6 @@ set undolevels=1000
 set nowrap
 
 set history=3000
-set noexpandtab
 set ruler
 set noerrorbells visualbell t_vb=
 set number
@@ -148,6 +150,8 @@ set hidden
 
 " Close NERDTree if no other buffers present
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+let g:NERDTreeDirArrows = 1
 
 " Set up backup and temp dirs
 set backupdir=$VIMTEMP//
